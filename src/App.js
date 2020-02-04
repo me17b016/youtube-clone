@@ -8,11 +8,11 @@ import youtube from "./api/youtube";
 export default () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
-
+  
   return (
     <Grid style={{ justifyContent: "center" }} container spacing={10}>
       <Grid item xs={11}>
-        <Grid container spacing={10}>
+        <Grid container spacing={3}>
           <Grid item xs={12}>
             <SearchBar onSubmit={handleSubmit} />
           </Grid>
@@ -31,7 +31,7 @@ export default () => {
     const { data: { items: videos } } = await youtube.get("search", {
       params: {
         part: "snippet",
-        maxResults: 5,
+        maxResults: 10,
         key: process.env.REACT_APP_API_KEY,
         q: searchTerm,
       }

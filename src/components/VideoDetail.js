@@ -9,7 +9,7 @@ export default ({ video }) => {
 
   return (
     <React.Fragment>
-      <Paper elevation={6} style={{ height: "70%" }}>
+      <Paper elevation={1} style={{ height: "36%" }}>
         <iframe
           frameBorder="0"
           height="100%"
@@ -18,8 +18,8 @@ export default ({ video }) => {
           src={videoSrc}
         />
       </Paper>
-      <Paper elevation={6} style={{ padding: "15px" }}>
-        <Typography variant="h4">
+      <Paper elevation={2} style={{ padding: "10px" }}>
+        <Typography variant="h5">
           {video.snippet.title} - {video.snippet.channelTitle}
         </Typography>
         <Typography variant="subtitle1">
